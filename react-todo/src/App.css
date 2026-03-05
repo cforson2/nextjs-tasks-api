@@ -55,6 +55,7 @@ h1 {
 .todo-list {
   list-style: none;
   padding: 0;
+  color: black;
 }
 
 .todo-item {
@@ -66,16 +67,17 @@ h1 {
   border-radius: 6px;
   margin-bottom: 0.5rem;
   background: #fafafa;
+  color:black;
 }
 
 .delete-btn {
   background: #e74c3c;
-  color: white;
   border: none;
   padding: 0.35rem 0.75rem;
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.85rem;
+  color: white;
 }
 
 .delete-btn:hover {
