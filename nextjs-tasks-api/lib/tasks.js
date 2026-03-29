@@ -2,8 +2,11 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-const TMP_FILE = '/tmp/tasks.json';
-const SEED_FILE = path.join(process.cwd(), 'tasks.json');
+const isVercel = process.env.VERCEL === '1';
+const TMP_FILE = isVercel
+  ? '/tmp/tasks.json'
+  : path.join(process.cwd(), 'tmp', 'tasks.json');
+  const SEED_FILE = path.join(process.cwd(), 'tasks.json');
 
 export async function readTasks() {
   try {
